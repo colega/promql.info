@@ -8,6 +8,7 @@ import (
 	"html/template"
 	"io"
 	"net/http"
+	"os"
 	"regexp"
 	"strings"
 
@@ -38,7 +39,7 @@ func main() {
 		}
 	})
 
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(os.Getenv("PROMQL_INFO_HOST")+":8080", nil)
 }
 
 func handleGet(w http.ResponseWriter, r *http.Request) {

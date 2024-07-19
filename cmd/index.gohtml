@@ -3,12 +3,17 @@
 <html lang="en">
 <head>
     <title>promql.info</title>
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/perl/perl.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/juejin.min.css"></link>
 </head>
 <body>
     <h1>promql.info</h1>
     <p>promql.info is a simple web application that provides a simple interface to test PromQL.</p>
     <form action="/" method="POST">
-        <textarea style="width: 100%; height: 200px;" name="query">{{ .Textarea }}</textarea>
+        <textarea style="width: 100%; height: 200px;" name="query" id="query">{{ .Textarea }}</textarea>
         <input type="submit" value="Submit">
     </form>
     {{ if .Error }}
@@ -22,5 +27,12 @@
         <h2>Share link</h2>
         <p>Share this link with others to show them the current query:</p> <a href="{{ .Link }}" style="display: block; border: 1px solid black; font-family: monospace; padding: 10px; color: black; overflow: auto; text-wrap: nowrap">{{ .Link }}</a>
     {{ end }}
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById('query'), {
+            lineNumbers: true,
+            mode: 'text/plain',
+            theme: 'juejin',
+        });
+    </script>
 </body>
 </html>
