@@ -1,11 +1,28 @@
-# Testdata for resets() and changes().
+# Load some data.
 load 5m
-	http_requests{path="/foo"}	1 2 3 0 1 0 0 1 2 0
-	http_requests{path="/bar"}	1 2 3 4 5 1 2 3 4 5
-	http_requests{path="/biz"}	0 0 0 0 0 1 1 1 1 1
+  http_requests{job="api-server", instance="0", group="production"} 0+10x10
+  http_requests{job="api-server", instance="1", group="production"} 0+20x10
+  http_requests{job="api-server", instance="0", group="canary"}   0+30x10
+  http_requests{job="api-server", instance="1", group="canary"}   0+40x10
+  http_requests{job="app-server", instance="0", group="production"} 0+50x10
+  http_requests{job="app-server", instance="1", group="production"} 0+60x10
+  http_requests{job="app-server", instance="0", group="canary"}   0+70x10
+  http_requests{job="app-server", instance="1", group="canary"}   0+80x10
 
-# Tests for resets().
-eval instant at 50m resets(http_requests[5m])
-	{path="/foo"} 0
-	{path="/bar"} 0
-	{path="/biz"} 0
+# Test simple sum.
+eval instant at 50m sum by (group) (http_requests{job="api-server"})
+  {group="canary"} 700
+  {group="production"} 300
+
+# Clear storage.
+clear
+
+# Test time-related functions.
+eval instant at 0m year()
+  {} 1970
+
+eval instant at 1ms time()
+  0.001
+
+eval instant at 50m time()
+  3000
