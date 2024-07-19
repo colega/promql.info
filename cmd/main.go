@@ -2,9 +2,11 @@ package main
 
 import (
 	_ "embed"
+	"encoding/base64"
 	"errors"
 	"fmt"
 	"html/template"
+	"io"
 	"net/http"
 	"regexp"
 	"strings"
@@ -39,15 +41,21 @@ func main() {
 }
 
 func handleGet(w http.ResponseWriter, r *http.Request) {
-	data := Data{Textarea: example}
-	if err := indexTemplate.Execute(w, data); err != nil {
+	if err := r.ParseForm(); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
+	var query string
+	queryBytes, err := io.ReadAll(base64.NewDecoder(base64.StdEncoding, strings.NewReader(r.FormValue("b64"))))
+	if err == nil && len(queryBytes) > 0 {
+		query = string(queryBytes)
+	} else {
+		query = example
+	}
+	handleQuery(w, query)
 }
 
 func handlePost(w http.ResponseWriter, r *http.Request) {
-	// Parse the form
 	if err := r.ParseForm(); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
@@ -67,6 +75,10 @@ func handlePost(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	handleQuery(w, query)
+}
+
+func handleQuery(w http.ResponseWriter, query string) {
 	errs := run(query)
 	result := ""
 	if len(errs) == 0 {
