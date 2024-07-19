@@ -84,7 +84,7 @@ func handleQuery(w http.ResponseWriter, query string) {
 	errs := run(query)
 	result := ""
 	if len(errs) == 0 {
-		result = "All tests passed"
+		result = "✅ All tests passed"
 	}
 	link := fmt.Sprintf("https://promql.info/?b64=%s", base64.StdEncoding.EncodeToString([]byte(query)))
 
@@ -113,7 +113,7 @@ func (*testingT) FailNow() { panic(errFailed) }
 func (t *testingT) Errorf(format string, args ...interface{}) {
 	msg := fmt.Sprintf(format, args...)
 	if m := msgRegex.FindStringSubmatch(msg); m != nil {
-		msg = m[1]
+		msg = "❌ " + m[1]
 	}
 	t.errs = append(t.errs, msg)
 }
