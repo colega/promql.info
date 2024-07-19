@@ -19,6 +19,7 @@ type Data struct {
 	Textarea string
 	Error    string
 	Result   string
+	Link     string
 }
 
 //go:embed index.gohtml
@@ -84,12 +85,14 @@ func handleQuery(w http.ResponseWriter, query string) {
 	if len(errs) == 0 {
 		result = "All tests passed"
 	}
+	link := fmt.Sprintf("https://promql.info/?b64=%s", base64.StdEncoding.EncodeToString([]byte(query)))
 
 	// Render the template
 	data := Data{
 		Textarea: query,
 		Error:    strings.Join(errs, "<br>"),
 		Result:   result,
+		Link:     link,
 	}
 	if err := indexTemplate.Execute(w, data); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)

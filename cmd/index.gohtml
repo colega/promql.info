@@ -18,5 +18,9 @@
         <h2>Result</h2>
         <pre>{{ .Result }}</pre>
     {{ end }}
+    {{ if .Link }}
+        <h2>Share link</h2>
+        <p>Share this link with others to show them the current query:</p> <a href="{{ .Link }}" style="display: block; border: 1px solid black; font-family: monospace; padding: 10px; color: black; overflow: auto; text-wrap: nowrap">{{ .Link }}</a>
+    {{ end }}
 </body>
 </html>
