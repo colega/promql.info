@@ -23,6 +23,9 @@ type Data struct {
 var indexHTML string
 var indexTemplate = template.Must(template.New("index").Parse(indexHTML))
 
+//go:embed example.test
+var example string
+
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		if r.Method == http.MethodPost {
@@ -36,12 +39,7 @@ func main() {
 }
 
 func handleGet(w http.ResponseWriter, r *http.Request) {
-	// Render the template
-	data := Data{
-		Textarea: "",
-		Error:    "",
-		Result:   "",
-	}
+	data := Data{Textarea: example}
 	if err := indexTemplate.Execute(w, data); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
