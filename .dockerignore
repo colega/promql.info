@@ -1,0 +1,441 @@
+# flyctl launch added from .idea/.gitignore
+# Default ignored files
+.idea/shelf
+.idea/workspace.xml
+# Editor-based HTTP Client requests
+.idea/httpRequests
+
+# flyctl launch added from vendor/github.com/bboreham/go-loser/.gitignore
+# If you prefer the allow list template instead of the deny list, see community template:
+# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
+#
+# Binaries for programs and plugins
+vendor/github.com/bboreham/go-loser/**/*.exe
+vendor/github.com/bboreham/go-loser/**/*.exe~
+vendor/github.com/bboreham/go-loser/**/*.dll
+vendor/github.com/bboreham/go-loser/**/*.so
+vendor/github.com/bboreham/go-loser/**/*.dylib
+
+# Test binary, built with `go test -c`
+vendor/github.com/bboreham/go-loser/**/*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+vendor/github.com/bboreham/go-loser/**/*.out
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+# Go workspace file
+vendor/github.com/bboreham/go-loser/**/go.work
+
+# flyctl launch added from vendor/github.com/dennwc/varint/.gitignore
+vendor/github.com/dennwc/varint/**/*.o
+vendor/github.com/dennwc/varint/**/*.txt
+
+# flyctl launch added from vendor/github.com/edsrzf/mmap-go/.gitignore
+vendor/github.com/edsrzf/mmap-go/**/*.out
+vendor/github.com/edsrzf/mmap-go/**/*.5
+vendor/github.com/edsrzf/mmap-go/**/*.6
+vendor/github.com/edsrzf/mmap-go/**/*.8
+vendor/github.com/edsrzf/mmap-go/**/*.swp
+vendor/github.com/edsrzf/mmap-go/**/_obj
+vendor/github.com/edsrzf/mmap-go/**/_test
+vendor/github.com/edsrzf/mmap-go/**/testdata
+vendor/github.com/edsrzf/mmap-go/.idea
+vendor/github.com/edsrzf/mmap-go/**/*.iml
+vendor/github.com/edsrzf/mmap-go/notes.txt
+
+# flyctl launch added from vendor/github.com/go-kit/log/.gitignore
+# Binaries for programs and plugins
+vendor/github.com/go-kit/log/**/*.exe
+vendor/github.com/go-kit/log/**/*.exe~
+vendor/github.com/go-kit/log/**/*.dll
+vendor/github.com/go-kit/log/**/*.so
+vendor/github.com/go-kit/log/**/*.dylib
+
+# Test binary, built with `go test -c`
+vendor/github.com/go-kit/log/**/*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+vendor/github.com/go-kit/log/**/*.out
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+# flyctl launch added from vendor/github.com/go-logfmt/logfmt/.gitignore
+vendor/github.com/go-logfmt/logfmt/**/.vscode
+
+# flyctl launch added from vendor/github.com/golang/snappy/.gitignore
+vendor/github.com/golang/snappy/**/cmd/snappytool/snappytool
+vendor/github.com/golang/snappy/**/testdata/bench
+
+# These explicitly listed benchmark data files are for an obsolete version of
+# snappy_test.go.
+vendor/github.com/golang/snappy/**/testdata/alice29.txt
+vendor/github.com/golang/snappy/**/testdata/asyoulik.txt
+vendor/github.com/golang/snappy/**/testdata/fireworks.jpeg
+vendor/github.com/golang/snappy/**/testdata/geo.protodata
+vendor/github.com/golang/snappy/**/testdata/html
+vendor/github.com/golang/snappy/**/testdata/html_x_4
+vendor/github.com/golang/snappy/**/testdata/kppkn.gtb
+vendor/github.com/golang/snappy/**/testdata/lcet10.txt
+vendor/github.com/golang/snappy/**/testdata/paper-100k.pdf
+vendor/github.com/golang/snappy/**/testdata/plrabn12.txt
+vendor/github.com/golang/snappy/**/testdata/urls.10K
+
+# flyctl launch added from vendor/github.com/golang-jwt/jwt/v5/.gitignore
+vendor/github.com/golang-jwt/jwt/v5/**/.DS_Store
+vendor/github.com/golang-jwt/jwt/v5/**/bin
+vendor/github.com/golang-jwt/jwt/v5/**/.idea
+
+
+# flyctl launch added from vendor/github.com/grafana/regexp/.gitignore
+# Binaries for programs and plugins
+vendor/github.com/grafana/regexp/**/*.exe
+vendor/github.com/grafana/regexp/**/*.exe~
+vendor/github.com/grafana/regexp/**/*.dll
+vendor/github.com/grafana/regexp/**/*.so
+vendor/github.com/grafana/regexp/**/*.dylib
+
+# Test binary, built with `go test -c`
+vendor/github.com/grafana/regexp/**/*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+vendor/github.com/grafana/regexp/**/*.out
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+# flyctl launch added from vendor/github.com/jmespath/go-jmespath/.gitignore
+vendor/github.com/jmespath/go-jmespath/jpgo
+vendor/github.com/jmespath/go-jmespath/**/jmespath-fuzz.zip
+vendor/github.com/jmespath/go-jmespath/**/cpu.out
+vendor/github.com/jmespath/go-jmespath/**/go-jmespath.test
+
+# flyctl launch added from vendor/github.com/klauspost/compress/.gitignore
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+vendor/github.com/klauspost/compress/**/*.o
+vendor/github.com/klauspost/compress/**/*.a
+vendor/github.com/klauspost/compress/**/*.so
+
+# Folders
+vendor/github.com/klauspost/compress/**/_obj
+vendor/github.com/klauspost/compress/**/_test
+
+# Architecture specific extensions/prefixes
+vendor/github.com/klauspost/compress/**/*.[568vq]
+vendor/github.com/klauspost/compress/**/[568vq].out
+
+vendor/github.com/klauspost/compress/**/*.cgo1.go
+vendor/github.com/klauspost/compress/**/*.cgo2.c
+vendor/github.com/klauspost/compress/**/_cgo_defun.c
+vendor/github.com/klauspost/compress/**/_cgo_gotypes.go
+vendor/github.com/klauspost/compress/**/_cgo_export.*
+
+vendor/github.com/klauspost/compress/**/_testmain.go
+
+vendor/github.com/klauspost/compress/**/*.exe
+vendor/github.com/klauspost/compress/**/*.test
+vendor/github.com/klauspost/compress/**/*.prof
+vendor/github.com/klauspost/compress/s2/cmd/_s2sx/sfx-exe
+
+# Linux perf files
+vendor/github.com/klauspost/compress/**/perf.data
+vendor/github.com/klauspost/compress/**/perf.data.old
+
+# gdb history
+vendor/github.com/klauspost/compress/**/.gdb_history
+
+# flyctl launch added from vendor/github.com/klauspost/compress/huff0/.gitignore
+vendor/github.com/klauspost/compress/huff0/huff0-fuzz.zip
+
+# flyctl launch added from vendor/github.com/kylelemons/godebug/pretty/.gitignore
+vendor/github.com/kylelemons/godebug/pretty/**/*.test
+vendor/github.com/kylelemons/godebug/pretty/**/*.bench
+vendor/github.com/kylelemons/godebug/pretty/**/*.golden
+vendor/github.com/kylelemons/godebug/pretty/**/*.txt
+vendor/github.com/kylelemons/godebug/pretty/**/*.prof
+
+# flyctl launch added from vendor/github.com/mwitkow/go-conntrack/.gitignore
+# Created by .ignore support plugin (hsz.mobi)
+### JetBrains template
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff:
+vendor/github.com/mwitkow/go-conntrack/**/.idea
+vendor/github.com/mwitkow/go-conntrack/**/.idea/workspace.xml
+vendor/github.com/mwitkow/go-conntrack/**/.idea/tasks.xml
+vendor/github.com/mwitkow/go-conntrack/**/.idea/dictionaries
+vendor/github.com/mwitkow/go-conntrack/**/.idea/vcs.xml
+vendor/github.com/mwitkow/go-conntrack/**/.idea/jsLibraryMappings.xml
+
+# Sensitive or high-churn files:
+vendor/github.com/mwitkow/go-conntrack/**/.idea/dataSources.ids
+vendor/github.com/mwitkow/go-conntrack/**/.idea/dataSources.xml
+vendor/github.com/mwitkow/go-conntrack/**/.idea/dataSources.local.xml
+vendor/github.com/mwitkow/go-conntrack/**/.idea/sqlDataSources.xml
+vendor/github.com/mwitkow/go-conntrack/**/.idea/dynamic.xml
+vendor/github.com/mwitkow/go-conntrack/**/.idea/uiDesigner.xml
+
+# Gradle:
+vendor/github.com/mwitkow/go-conntrack/**/.idea/gradle.xml
+vendor/github.com/mwitkow/go-conntrack/**/.idea/libraries
+
+# Mongo Explorer plugin:
+vendor/github.com/mwitkow/go-conntrack/**/.idea/mongoSettings.xml
+
+## File-based project format:
+vendor/github.com/mwitkow/go-conntrack/**/*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+vendor/github.com/mwitkow/go-conntrack/out
+
+# mpeltonen/sbt-idea plugin
+vendor/github.com/mwitkow/go-conntrack/**/.idea_modules
+
+# JIRA plugin
+vendor/github.com/mwitkow/go-conntrack/**/atlassian-ide-plugin.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+vendor/github.com/mwitkow/go-conntrack/**/com_crashlytics_export_strings.xml
+vendor/github.com/mwitkow/go-conntrack/**/crashlytics.properties
+vendor/github.com/mwitkow/go-conntrack/**/crashlytics-build.properties
+vendor/github.com/mwitkow/go-conntrack/**/fabric.properties
+### Go template
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+vendor/github.com/mwitkow/go-conntrack/**/*.o
+vendor/github.com/mwitkow/go-conntrack/**/*.a
+vendor/github.com/mwitkow/go-conntrack/**/*.so
+
+# Folders
+vendor/github.com/mwitkow/go-conntrack/**/_obj
+vendor/github.com/mwitkow/go-conntrack/**/_test
+
+# Architecture specific extensions/prefixes
+vendor/github.com/mwitkow/go-conntrack/**/*.[568vq]
+vendor/github.com/mwitkow/go-conntrack/**/[568vq].out
+
+vendor/github.com/mwitkow/go-conntrack/**/*.cgo1.go
+vendor/github.com/mwitkow/go-conntrack/**/*.cgo2.c
+vendor/github.com/mwitkow/go-conntrack/**/_cgo_defun.c
+vendor/github.com/mwitkow/go-conntrack/**/_cgo_gotypes.go
+vendor/github.com/mwitkow/go-conntrack/**/_cgo_export.*
+
+vendor/github.com/mwitkow/go-conntrack/**/_testmain.go
+
+vendor/github.com/mwitkow/go-conntrack/**/*.exe
+vendor/github.com/mwitkow/go-conntrack/**/*.test
+vendor/github.com/mwitkow/go-conntrack/**/*.prof
+### Python template
+# Byte-compiled / optimized / DLL files
+vendor/github.com/mwitkow/go-conntrack/**/__pycache__
+vendor/github.com/mwitkow/go-conntrack/**/*.py[cod]
+vendor/github.com/mwitkow/go-conntrack/**/*$py.class
+
+# C extensions
+vendor/github.com/mwitkow/go-conntrack/**/*.so
+
+# Distribution / packaging
+vendor/github.com/mwitkow/go-conntrack/**/.Python
+vendor/github.com/mwitkow/go-conntrack/**/env
+vendor/github.com/mwitkow/go-conntrack/**/build
+vendor/github.com/mwitkow/go-conntrack/**/develop-eggs
+vendor/github.com/mwitkow/go-conntrack/**/dist
+vendor/github.com/mwitkow/go-conntrack/**/downloads
+vendor/github.com/mwitkow/go-conntrack/**/eggs
+vendor/github.com/mwitkow/go-conntrack/**/.eggs
+vendor/github.com/mwitkow/go-conntrack/**/lib
+vendor/github.com/mwitkow/go-conntrack/**/lib64
+vendor/github.com/mwitkow/go-conntrack/**/parts
+vendor/github.com/mwitkow/go-conntrack/**/sdist
+vendor/github.com/mwitkow/go-conntrack/**/var
+vendor/github.com/mwitkow/go-conntrack/**/*.egg-info
+vendor/github.com/mwitkow/go-conntrack/**/.installed.cfg
+vendor/github.com/mwitkow/go-conntrack/**/*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+vendor/github.com/mwitkow/go-conntrack/**/*.manifest
+vendor/github.com/mwitkow/go-conntrack/**/*.spec
+
+# Installer logs
+vendor/github.com/mwitkow/go-conntrack/**/pip-log.txt
+vendor/github.com/mwitkow/go-conntrack/**/pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+vendor/github.com/mwitkow/go-conntrack/**/htmlcov
+vendor/github.com/mwitkow/go-conntrack/**/.tox
+vendor/github.com/mwitkow/go-conntrack/**/.coverage
+vendor/github.com/mwitkow/go-conntrack/**/.coverage.*
+vendor/github.com/mwitkow/go-conntrack/**/.cache
+vendor/github.com/mwitkow/go-conntrack/**/nosetests.xml
+vendor/github.com/mwitkow/go-conntrack/**/coverage.xml
+vendor/github.com/mwitkow/go-conntrack/**/*,cover
+vendor/github.com/mwitkow/go-conntrack/**/.hypothesis
+
+# Translations
+vendor/github.com/mwitkow/go-conntrack/**/*.mo
+vendor/github.com/mwitkow/go-conntrack/**/*.pot
+
+# Django stuff:
+vendor/github.com/mwitkow/go-conntrack/**/*.log
+vendor/github.com/mwitkow/go-conntrack/**/local_settings.py
+
+# Flask stuff:
+vendor/github.com/mwitkow/go-conntrack/**/instance
+vendor/github.com/mwitkow/go-conntrack/**/.webassets-cache
+
+# Scrapy stuff:
+vendor/github.com/mwitkow/go-conntrack/**/.scrapy
+
+# Sphinx documentation
+vendor/github.com/mwitkow/go-conntrack/**/docs/_build
+
+# PyBuilder
+vendor/github.com/mwitkow/go-conntrack/**/target
+
+# IPython Notebook
+vendor/github.com/mwitkow/go-conntrack/**/.ipynb_checkpoints
+
+# pyenv
+vendor/github.com/mwitkow/go-conntrack/**/.python-version
+
+# celery beat schedule file
+vendor/github.com/mwitkow/go-conntrack/**/celerybeat-schedule
+
+# dotenv
+vendor/github.com/mwitkow/go-conntrack/**/.env
+
+# virtualenv
+vendor/github.com/mwitkow/go-conntrack/**/venv
+vendor/github.com/mwitkow/go-conntrack/**/ENV
+
+# Spyder project settings
+vendor/github.com/mwitkow/go-conntrack/**/.spyderproject
+
+# Rope project settings
+vendor/github.com/mwitkow/go-conntrack/**/.ropeproject
+
+
+# flyctl launch added from vendor/github.com/oklog/ulid/.gitignore
+#### joe made this: http://goel.io/joe
+
+#####=== Go ===#####
+
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+vendor/github.com/oklog/ulid/**/*.o
+vendor/github.com/oklog/ulid/**/*.a
+vendor/github.com/oklog/ulid/**/*.so
+
+# Folders
+vendor/github.com/oklog/ulid/**/_obj
+vendor/github.com/oklog/ulid/**/_test
+
+# Architecture specific extensions/prefixes
+vendor/github.com/oklog/ulid/**/*.[568vq]
+vendor/github.com/oklog/ulid/**/[568vq].out
+
+vendor/github.com/oklog/ulid/**/*.cgo1.go
+vendor/github.com/oklog/ulid/**/*.cgo2.c
+vendor/github.com/oklog/ulid/**/_cgo_defun.c
+vendor/github.com/oklog/ulid/**/_cgo_gotypes.go
+vendor/github.com/oklog/ulid/**/_cgo_export.*
+
+vendor/github.com/oklog/ulid/**/_testmain.go
+
+vendor/github.com/oklog/ulid/**/*.exe
+vendor/github.com/oklog/ulid/**/*.test
+vendor/github.com/oklog/ulid/**/*.prof
+
+
+# flyctl launch added from vendor/github.com/prometheus/client_golang/prometheus/.gitignore
+vendor/github.com/prometheus/client_golang/prometheus/**/command-line-arguments.test
+
+# flyctl launch added from vendor/github.com/prometheus/procfs/.gitignore
+vendor/github.com/prometheus/procfs/testdata/fixtures
+vendor/github.com/prometheus/procfs/fixtures
+
+# flyctl launch added from vendor/github.com/prometheus/prometheus/tsdb/.gitignore
+vendor/github.com/prometheus/prometheus/tsdb/**/benchout
+
+# flyctl launch added from vendor/go.opentelemetry.io/otel/.gitignore
+vendor/go.opentelemetry.io/otel/**/.DS_Store
+vendor/go.opentelemetry.io/otel/**/Thumbs.db
+
+vendor/go.opentelemetry.io/otel/**/.tools
+vendor/go.opentelemetry.io/otel/**/venv
+vendor/go.opentelemetry.io/otel/**/.idea
+vendor/go.opentelemetry.io/otel/**/.vscode
+vendor/go.opentelemetry.io/otel/**/*.iml
+vendor/go.opentelemetry.io/otel/**/*.so
+vendor/go.opentelemetry.io/otel/**/coverage.*
+vendor/go.opentelemetry.io/otel/**/go.work
+vendor/go.opentelemetry.io/otel/**/go.work.sum
+
+vendor/go.opentelemetry.io/otel/**/gen
+
+vendor/go.opentelemetry.io/otel/example/dice/dice
+vendor/go.opentelemetry.io/otel/example/namedtracer/namedtracer
+vendor/go.opentelemetry.io/otel/example/otel-collector/otel-collector
+vendor/go.opentelemetry.io/otel/example/opencensus/opencensus
+vendor/go.opentelemetry.io/otel/example/passthrough/passthrough
+vendor/go.opentelemetry.io/otel/example/prometheus/prometheus
+vendor/go.opentelemetry.io/otel/example/zipkin/zipkin
+
+# flyctl launch added from vendor/go.uber.org/atomic/.gitignore
+vendor/go.uber.org/atomic/bin
+vendor/go.uber.org/atomic/**/.DS_Store
+vendor/go.uber.org/atomic/vendor
+vendor/go.uber.org/atomic/**/cover.html
+vendor/go.uber.org/atomic/**/cover.out
+vendor/go.uber.org/atomic/**/lint.log
+
+# Binaries
+vendor/go.uber.org/atomic/**/*.test
+
+# Profiling output
+vendor/go.uber.org/atomic/**/*.prof
+
+# Output of fossa analyzer
+vendor/go.uber.org/atomic/fossa
+
+# flyctl launch added from vendor/go.uber.org/goleak/.gitignore
+vendor/go.uber.org/goleak/**/vendor
+vendor/go.uber.org/goleak/bin
+vendor/go.uber.org/goleak/lint.log
+vendor/go.uber.org/goleak/cover.out
+vendor/go.uber.org/goleak/cover.html
+
+# flyctl launch added from vendor/golang.org/x/net/http2/.gitignore
+vendor/golang.org/x/net/http2/**/*~
+vendor/golang.org/x/net/http2/**/h2i/h2i
+
+# flyctl launch added from vendor/golang.org/x/sys/unix/.gitignore
+vendor/golang.org/x/sys/unix/**/_obj
+vendor/golang.org/x/sys/unix/**/unix.test
+
+# flyctl launch added from vendor/k8s.io/klog/v2/.gitignore
+# OSX leaves these everywhere on SMB shares
+vendor/k8s.io/klog/v2/**/._*
+
+# OSX trash
+vendor/k8s.io/klog/v2/**/.DS_Store
+
+# Eclipse files
+vendor/k8s.io/klog/v2/**/.classpath
+vendor/k8s.io/klog/v2/**/.project
+vendor/k8s.io/klog/v2/**/.settings/**
+
+# Files generated by JetBrains IDEs, e.g. IntelliJ IDEA
+vendor/k8s.io/klog/v2/**/.idea
+vendor/k8s.io/klog/v2/**/*.iml
+
+# Vscode files
+vendor/k8s.io/klog/v2/**/.vscode
+fly.toml
+
+promql-info
