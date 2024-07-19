@@ -1,13 +1,20 @@
-# Load some data.
+# Load data in a trivial way.
+load 5m
+	http_requests{path="/foo"}	0 1 2 3 2 3 4
+
+# Test the increase() function.
+eval instant at 30m increase(http_requests[30m])
+    {path="/foo"} 7
+
+# Clear storage.
+clear
+
+# Load data in a different way.
 load 5m
   http_requests{job="api-server", instance="0", group="production"} 0+10x10
   http_requests{job="api-server", instance="1", group="production"} 0+20x10
   http_requests{job="api-server", instance="0", group="canary"}   0+30x10
   http_requests{job="api-server", instance="1", group="canary"}   0+40x10
-  http_requests{job="app-server", instance="0", group="production"} 0+50x10
-  http_requests{job="app-server", instance="1", group="production"} 0+60x10
-  http_requests{job="app-server", instance="0", group="canary"}   0+70x10
-  http_requests{job="app-server", instance="1", group="canary"}   0+80x10
 
 # Test simple sum.
 eval instant at 50m sum by (group) (http_requests{job="api-server"})
@@ -17,7 +24,7 @@ eval instant at 50m sum by (group) (http_requests{job="api-server"})
 # Clear storage.
 clear
 
-# Test time-related functions.
+# Test time-related functions without loading any data.
 eval instant at 0m year()
   {} 1970
 
