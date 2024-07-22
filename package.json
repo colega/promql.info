@@ -4,8 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss build -o static/css/tailwind.css",
-    "watch": "tailwindcss build -o static/css/tailwind.css --watch"
+    "install-dev": "go install github.com/air-verse/air@latest",
+    "build-js": "./node_modules/.bin/rollup --config rollup.config.mjs",
+    "build-css": "tailwindcss build -o static/css/tailwind.css",
+    "build": "npm run build-js && npm run build-css",
+    "watch-css": "tailwindcss build -o static/css/tailwind.css --watch",
+    "watch-js": "./node_modules/.bin/rollup --watch --config rollup.config.mjs",
+    "watch-go": "air -c .air.toml"
   },
   "repository": {
     "type": "git",
@@ -18,6 +23,13 @@
   },
   "homepage": "https://github.com/colega/promql.info#readme",
   "dependencies": {
-    "tailwindcss": "^3.4.6"
+    "@codemirror/commands": "^6.6.0",
+    "@codemirror/state": "^6.4.1",
+    "@codemirror/view": "^6.28.6",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "codemirror": "^6.0.1",
+    "rollup": "^4.19.0",
+    "tailwindcss": "^3.4.6",
+    "thememirror": "^2.0.1"
   }
 }

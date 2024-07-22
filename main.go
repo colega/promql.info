@@ -19,6 +19,8 @@ import (
 	"github.com/colega/promql.info/templates"
 )
 
+//go:generate npm run build
+
 type config struct {
 	Host string `default:"127.0.0.1"`
 	Port string `default:"8080"`
@@ -46,6 +48,7 @@ func main() {
 		}
 	}))
 
+	log.Printf("Listening on %s:%s", cfg.Host, cfg.Port)
 	err := http.ListenAndServe(cfg.Host+":"+cfg.Port, mux)
 	if err != nil {
 		log.Fatal(err)
