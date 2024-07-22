@@ -9,15 +9,20 @@ import (
 	"io"
 	"log"
 	"net/http"
-	"os"
 	"regexp"
 	"strings"
 
+	"github.com/colega/envconfig"
 	"github.com/prometheus/prometheus/promql"
 	"github.com/prometheus/prometheus/promql/promqltest"
 
 	"github.com/colega/promql.info/templates"
 )
+
+type config struct {
+	Host string `default:"127.0.0.1"`
+	Port string `default:"8080"`
+}
 
 //go:embed static
 var static embed.FS
@@ -26,6 +31,11 @@ var static embed.FS
 var example string
 
 func main() {
+	var cfg config
+	if err := envconfig.Process("APP", &cfg); err != nil {
+		log.Fatal(err)
+	}
+
 	mux := http.NewServeMux()
 	mux.Handle("/static/", http.FileServer(http.FS(static)))
 	mux.Handle("/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -36,7 +46,7 @@ func main() {
 		}
 	}))
 
-	err := http.ListenAndServe(os.Getenv("PROMQL_INFO_HOST")+":8080", mux)
+	err := http.ListenAndServe(cfg.Host+":"+cfg.Port, mux)
 	if err != nil {
 		log.Fatal(err)
 	}

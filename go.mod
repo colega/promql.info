@@ -2,7 +2,10 @@ module github.com/colega/promql.info
 
 go 1.22.4
 
-require github.com/prometheus/prometheus v0.53.2-0.20240718123124-e9dec5fc537b
+require (
+	github.com/colega/envconfig v0.1.0
+	github.com/prometheus/prometheus v0.53.2-0.20240718123124-e9dec5fc537b
+)
 
 require (
 	github.com/Azure/azure-sdk-for-go/sdk/azcore v1.11.1 // indirect
