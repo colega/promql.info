@@ -1,0 +1,23 @@
+{
+  "name": "promql.info",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss build -o static/css/tailwind.css",
+    "watch": "tailwindcss build -o static/css/tailwind.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colega/promql.info.git"
+  },
+  "author": "@colega",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/colega/promql.info/issues"
+  },
+  "homepage": "https://github.com/colega/promql.info#readme",
+  "dependencies": {
+    "tailwindcss": "^3.4.6"
+  }
+}
