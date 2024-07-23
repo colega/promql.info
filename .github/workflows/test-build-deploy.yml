@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+  pull_request:
 jobs:
   build:
     name: Test build app
@@ -22,6 +23,7 @@ jobs:
     name: Deploy app
     runs-on: ubuntu-latest
     concurrency: deploy-group    # optional: ensure only one action runs at a time
+    if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
       - uses: superfly/flyctl-actions/setup-flyctl@master
