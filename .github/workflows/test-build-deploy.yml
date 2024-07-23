@@ -19,6 +19,7 @@ jobs:
       - run: npm install
       - run: npm run build
       - run: go build .
+      - run: git diff --exit-code
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
