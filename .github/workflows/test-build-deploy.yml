@@ -1,11 +1,23 @@
-# See https://fly.io/docs/app-guides/continuous-deployment-with-github-actions/
-
-name: Fly Deploy
+name: CI/CD
 on:
   push:
     branches:
       - main
 jobs:
+  build:
+    name: Test build app
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+      - run: npm install
+      - run: npm run build
+      - run: go build .
   deploy:
     name: Deploy app
     runs-on: ubuntu-latest
